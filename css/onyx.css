@@ -1,0 +1,52 @@
+/* Canonical Onyx CSS tokens. Apply .onyx-theme--light or .onyx-theme--dark at the application root. */
+:root {
+  --onyx-color-paper: #fafaf8; --onyx-color-mist: #f2f2ef; --onyx-color-ash-20: #e2e2de;
+  --onyx-color-ash-30: #cacac5; --onyx-color-ash-50: #8c8c86; --onyx-color-charcoal: #4a4a46;
+  --onyx-color-graphite: #333330; --onyx-color-onyx: #20201e; --onyx-color-jet: #0d0d0c;
+  --onyx-signal-orange: #e34a21; --onyx-signal-orange-strong: #b83b1a; --onyx-signal-orange-hover: #f15b32;
+  --onyx-font-interface: Archivo, Arial, sans-serif; --onyx-font-dense: 'Archivo Narrow', 'Arial Narrow', Arial, sans-serif;
+  --onyx-font-mono: 'IBM Plex Mono', Menlo, Consolas, monospace;
+  --onyx-radius-control: 2px; --onyx-duration-fast: 70ms; --onyx-duration-moderate: 150ms;
+}
+
+.onyx-theme--light {
+  color-scheme: light;
+  --onyx-surface-canvas: #fafaf8; --onyx-surface-layer-01: #f2f2ef; --onyx-surface-layer-02: #fafaf8;
+  --onyx-surface-field: #f2f2ef; --onyx-surface-hover: #e2e2de; --onyx-surface-selected: #e2e2de;
+  --onyx-text-primary: #20201e; --onyx-text-secondary: #4a4a46; --onyx-text-placeholder: #8c8c86; --onyx-text-disabled: #8c8c86;
+  --onyx-border-subtle: #e2e2de; --onyx-border-strong: #cacac5; --onyx-border-disabled: #cacac5;
+  --onyx-action-primary: #e34a21; --onyx-action-primary-hover: #f15b32; --onyx-action-primary-active: #b83b1a;
+  --onyx-action-primary-text: #0d0d0c; --onyx-link: #b83b1a; --onyx-focus-ring: #b83b1a; --onyx-focus-inset: #fafaf8;
+  --onyx-status-success: #12683f; --onyx-status-success-bg: #d9f0e4; --onyx-status-warning: #875f00; --onyx-status-warning-bg: #fff0c7;
+  --onyx-status-error: #c9362b; --onyx-status-error-bg: #f8ddda; --onyx-status-info: #246bce; --onyx-status-info-bg: #dce9fa;
+}
+
+.onyx-theme--dark {
+  color-scheme: dark;
+  --onyx-surface-canvas: #0d0d0c; --onyx-surface-layer-01: #20201e; --onyx-surface-layer-02: #333330;
+  --onyx-surface-field: #333330; --onyx-surface-hover: #4a4a46; --onyx-surface-selected: #4a4a46;
+  --onyx-text-primary: #f2f2ef; --onyx-text-secondary: #8c8c86; --onyx-text-placeholder: #8c8c86; --onyx-text-disabled: #4a4a46;
+  --onyx-border-subtle: #333330; --onyx-border-strong: #4a4a46; --onyx-border-disabled: #333330;
+  --onyx-action-primary: #e34a21; --onyx-action-primary-hover: #f15b32; --onyx-action-primary-active: #b83b1a;
+  --onyx-action-primary-text: #0d0d0c; --onyx-link: #6aa8ff; --onyx-focus-ring: #f2f2ef; --onyx-focus-inset: #0d0d0c;
+  --onyx-status-success: #47b882; --onyx-status-success-bg: #173e2c; --onyx-status-warning: #f2bd3a; --onyx-status-warning-bg: #4b390d;
+  --onyx-status-error: #e5655c; --onyx-status-error-bg: #4a2220; --onyx-status-info: #6aa8ff; --onyx-status-info-bg: #182f50;
+}
+
+/* Carbon semantic aliases: preserve Carbon component structure and behavior. */
+.onyx-theme--light, .onyx-theme--dark {
+  --onyx-button-primary-background: var(--onyx-action-primary); --onyx-button-primary-background-hover: var(--onyx-action-primary-hover);
+  --onyx-button-primary-background-active: var(--onyx-action-primary-active); --onyx-button-primary-text: var(--onyx-action-primary-text);
+  --onyx-field-border: var(--onyx-border-strong); --onyx-field-border-focus: var(--onyx-focus-ring);
+  --onyx-table-header-background: var(--onyx-surface-layer-01); --onyx-table-row-selected-indicator: var(--onyx-action-primary);
+  --onyx-notification-error-border: var(--onyx-status-error); --onyx-notification-warning-border: var(--onyx-status-warning);
+  --cds-background: var(--onyx-surface-canvas); --cds-layer: var(--onyx-surface-layer-01); --cds-layer-01: var(--onyx-surface-layer-01);
+  --cds-layer-02: var(--onyx-surface-layer-02); --cds-field: var(--onyx-surface-field); --cds-layer-hover: var(--onyx-surface-hover);
+  --cds-layer-selected: var(--onyx-surface-selected); --cds-text-primary: var(--onyx-text-primary); --cds-text-secondary: var(--onyx-text-secondary);
+  --cds-text-placeholder: var(--onyx-text-placeholder); --cds-text-disabled: var(--onyx-text-disabled); --cds-border-subtle: var(--onyx-border-subtle);
+  --cds-border-strong: var(--onyx-border-strong); --cds-border-disabled: var(--onyx-border-disabled); --cds-link-primary: var(--onyx-link);
+  --cds-link-primary-hover: var(--onyx-action-primary-active); --cds-focus: var(--onyx-focus-ring); --cds-focus-inset: var(--onyx-focus-inset);
+  --cds-button-primary: var(--onyx-action-primary); --cds-button-primary-hover: var(--onyx-action-primary-hover); --cds-button-primary-active: var(--onyx-action-primary-active);
+  --cds-button-primary-text: var(--onyx-action-primary-text); --cds-support-success: var(--onyx-status-success); --cds-support-warning: var(--onyx-status-warning);
+  --cds-support-error: var(--onyx-status-error); --cds-support-info: var(--onyx-status-info);
+}
